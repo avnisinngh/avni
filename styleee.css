@@ -1,0 +1,42 @@
+@media screen and (max-height:300px) {
+    ul{
+        margin-top: 40px;
+    }
+}
+@keyframes up {
+    from{
+        transform: scale(0px)
+    }
+    to{
+        transform: scale(0.25);
+    }
+    
+}
+.container{
+    background-color: black;
+}
+li{
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+a{
+    color: #ffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+a:hover{
+    animation: up 0s  linear 2s;
+}
+a:hover::after{
+    content: "   ";
+    width: 100%;
+    left: 0px;
+    background-color: #00fffc;
+    display: block;
+    height: 4px;
+}
